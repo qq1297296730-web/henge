@@ -28,10 +28,10 @@ env:
 
 jobs:
   build:
-    # Xcode 27 image (arm64, GA since Oct 2026). Plain `xcode-27` is a standard
-    # runner, so it's free on public repos; `xcode-27-xlarge` is a paid larger
-    # runner. Table: https://github.com/actions/runner-images#available-images
-    runs-on: xcode-27
+    # Use the stable macOS 26 arm64 image with the Xcode 26 toolchain.
+    # Xcode 27.1's iOS SDK failed packaging because Foundation/NSURLHandle.h
+    # was missing from the SDK headers.
+    runs-on: macos-26
     timeout-minutes: 120
 
     steps:
