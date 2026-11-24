@@ -99,6 +99,24 @@ jobs:
         working-directory: Henge
         run: make ios-lib
 
+      - name: Diagnose Apple SDK headers
+        working-directory: Henge
+        run: |
+          set -euxo pipefail
+          echo "== Xcode =="
+          xcodebuild -version
+          echo "== SDK =="
+          SDK="$(xcrun --sdk iphoneos --show-sdk-path)"
+          echo "$SDK"
+          echo "== Header imports =="
+          sed -n '1,28p' "$SDK/System/Library/Frameworks/Foundation.framework/Headers/NSURL.h"
+          echo "== NSURLHandle candidates =="
+          find "$SDK/System/Library/Frameworks" -name 'NSURLHandle.h' -print
+          echo "== Include-related environment =="
+          env | sort | grep -Ei '(^|_)(CPATH|CPLUS_INCLUDE_PATH|C_INCLUDE_PATH|OBJC_INCLUDE_PATH|SDKROOT|DEVELOPER_DIR)=' || true
+          echo "== Xcode compiler search settings =="
+          xcrun --sdk iphoneos clang -v -E -x objective-c /dev/null 2>&1 | tail -35
+
       - name: Package Henge.ipa
         working-directory: Henge
         # Prevent inherited compiler include-path variables from overriding Apple's SDK headers.
