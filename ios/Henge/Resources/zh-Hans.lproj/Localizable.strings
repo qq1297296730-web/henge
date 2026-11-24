@@ -155,3 +155,32 @@
 "Use StikDebug" = "使用 StikDebug";
 "Use TrollStore" = "使用 TrollStore";
 "Use the jailbreak" = "使用越狱环境";
+
+
+"Tap to click once. Tap then hold to begin dragging. Quickly tap with two fingers to right-click." = "轻点一次即可单击。轻点后按住即可开始拖动。快速双指轻点可执行右键单击。";
+"Delay hold waits to see if you're holding or just clicking the volume button, which results in all clicks being ~0.5s long." = "延迟长按模式会等待判断你是在长按还是轻按音量按钮，因此每次点击约为 0.5 秒。";
+"Tap then drag waits to see if you're holding or just clicking the volume button, but it unconditionally sends a single click regardless of whether you tap or hold, which results in shorter clicks at the cost of sending a click before holding." = "点按后拖动模式会判断你是在长按还是轻按音量按钮，但无论轻按还是长按都会先发送一次单击，因此点击响应更快，但开始长按前会先触发单击。";
+"Activates the camera in order to intercept volume keys properly. This causes the volume keys to behave in the same way a mouse's buttons do, but it causes higher temperatures, as the camera is always on." = "启用摄像头以正确拦截音量键。这样音量键就能像鼠标按键一样工作，但摄像头会持续开启，设备温度可能升高。";
+"JIT" = "JIT";
+"Pointer speed" = "指针速度";
+"Scroll speed" = "滚动速度";
+"Henge uses %@." = "Henge 正在使用 %@。";
+"Only enable this if your physical mouse's right and middle buttons are reversed in the Mac. Touch controls stay unchanged. Restart the Mac session to apply." = "仅当 Mac 中实体鼠标的右键和中键功能颠倒时启用。触控操作不受影响。重新启动 Mac 会话后生效。";
+"A Magic Keyboard or a Bluetooth mouse moves the Mac's pointer. Pointer speed changes apply the next time a Mac starts; scroll speed changes apply immediately." = "妙控键盘或蓝牙鼠标可控制 Mac 指针。指针速度在下次启动 Mac 时生效；滚动速度立即生效。";
+"Henge is able to emulate a Magic Trackpad, allowing you to perform native macOS gestures using your device's touchscreen.\n\n%@" = "Henge 可以模拟妙控板，让你通过设备触摸屏执行原生 macOS 手势。\n\n%@";
+"A bigger code cache empties less often and takes more memory (about 1.75 times its size); Henge picks one by its memory limit: 1.5 GB where there is plenty, 512 MB where there is little. Applies the next time Henge opens. If JIT stops turning on, or a Mac closes Henge during setup, choose a smaller one." = "更大的代码缓存清空频率更低，但占用更多内存（约为缓存容量的 1.75 倍）。Henge 会根据内存限制自动选择：内存充足时为 1.5 GB，内存较少时为 512 MB。下次打开 Henge 时生效。如果 JIT 无法开启，或 Mac 在设置期间导致 Henge 退出，请选择较小的缓存。";
+"macOS draws a frame for every refresh: 30 Hz leaves the most of the emulated CPU to apps, at the cost of choppier animation; 60 Hz is smoother. Faster disk writes order them without waiting for a full sync; a sudden power loss could lose the last ones. Quicker wake keeps an idle CPU watching for work for 50 µs, at some battery cost. Superblocks let translated code run past conditional branches. Changes apply the next time a Mac starts." = "macOS 每次刷新都会绘制一帧：30 Hz 能为应用留出更多模拟 CPU 性能，但动画会更不流畅；60 Hz 更顺滑。加快磁盘写入可减少等待完整同步的时间，但突然断电可能导致最近的数据丢失。加快空闲唤醒会让空闲 CPU 每隔 50 微秒检查一次任务，代价是增加耗电。超级块允许翻译后的代码跨越条件分支运行。所有更改在下次启动 Mac 时生效。";
+"When you leave Henge, the running Mac is saved to storage, and opening it again picks up where it was in a few seconds, even after iOS closes Henge. The save is about the size of the Mac's memory in use, compressed. The Mac pauses while Henge is in the background, so its sound stops. Experimental." = "离开 Henge 时，正在运行的 Mac 会保存到存储空间。即使 iOS 关闭了 Henge，再次打开也能在几秒内恢复到离开时的状态。保存文件经过压缩，大小约等于 Mac 当前使用的内存。Henge 在后台时 Mac 会暂停，因此声音也会停止。此功能为实验性功能。";
+"Bring in a .dmg or an .app (the + button on Home) and run it inside Henge through its own translation layer, without starting a Mac. Programs without windows run today; apps with windows don't yet. Experimental." = "通过主页上的“+”按钮导入 .dmg 或 .app 文件，无需启动 Mac，即可通过 Henge 自带的翻译层运行。当前支持运行没有窗口的程序，暂不支持带窗口的应用。此功能为实验性功能。";
+"System follows the %@'s Light or Dark setting. Henge stays dark while a Mac is running." = "跟随 %@ 的浅色或深色外观设置。Mac 运行期间，Henge 将保持深色外观。";
+"Tap then drag waits to see if you're holding or just clicking the volume button, but it unconditionally sends a single click regardless of whether you tap or hold, which results in shorter clicks at the cost of sending a click before holding." = "点按后拖动模式会判断你是在长按还是轻按音量按钮，但无论轻按还是长按都会先发送一次单击，因此点击响应更快，但开始长按前会先触发单击。";
+"Use the trackpad, keyboard or a connected mouse." = "使用触控板、键盘或已连接的鼠标。";
+"Make Henge full screen to use the trackpad or mouse as the Mac's" = "将 Henge 设为全屏后，即可将触控板或鼠标用作 Mac 的指针";
+"For more speed, give this Mac a still wallpaper and set its screen saver to Never in System Settings." = "如需提升速度，请为这台 Mac 设置静态壁纸，并在系统设置中将屏幕保护程序设为“永不”。";
+"The Mac supplies a small pointer image. Enlarging it can look blurry; 1× is the sharpest on an iPad. Scroll speed changes apply immediately." = "Mac 提供的指针图像尺寸较小，放大后可能会模糊；在 iPad 上使用 1× 最清晰。滚动速度更改会立即生效。";
+"Less drawing for the emulated CPUs: window and Dock animations, desktop widgets, the screen saver and a moving wallpaper go. Open Terminal on the Mac, tap the button and press Return, then log out and back in. Also turn on Reduce Motion and Reduce Transparency in the Mac's System Settings, Accessibility. Undo puts it back, apart from the wallpaper. Needs the Mac's keyboard layout to be U.S." = "减少模拟 CPU 的绘图负担：关闭窗口和程序坞动画、桌面小组件、屏幕保护程序及动态壁纸。在 Mac 上打开终端，点击按钮并按回车，然后注销并重新登录。还可以在 Mac 的“系统设置”→“辅助功能”中开启“减弱动态效果”和“降低透明度”。撤销命令会恢复设置，但不会恢复壁纸。Mac 键盘布局必须为美国布局。";
+"Enter this code on your %@" = "在 %@ 上输入此代码";
+"The pairing file stays in Henge's Documents folder and is only sent to Henge's own helper." = "配对文件会保存在 Henge 的 Documents 文件夹中，并且只会发送给 Henge 自己的辅助程序。";
+"TrollStore was not found on this %@. It installs on iOS 14.0 to 17.0." = "在这台 %@ 上未找到 TrollStore。它适用于 iOS 14.0 至 17.0。";
+"No jailbreak was found on this %@." = "在这台 %@ 上未检测到越狱环境。";
+"Henge was marked as debugged when it opened, so JIT is on." = "Henge 打开时已检测到调试状态，因此 JIT 已开启。";
