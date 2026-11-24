@@ -101,7 +101,8 @@ jobs:
 
       - name: Package Henge.ipa
         working-directory: Henge
-        run: zsh ios/scripts/package_ipa.sh
+        # Prevent inherited compiler include-path variables from overriding Apple's SDK headers.
+        run: env -u CPLUS_INCLUDE_PATH -u CPATH -u C_INCLUDE_PATH -u OBJC_INCLUDE_PATH zsh ios/scripts/package_ipa.sh
 
       - name: Upload Henge.ipa
         uses: actions/upload-artifact@v4
