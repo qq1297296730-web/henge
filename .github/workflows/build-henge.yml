@@ -13,7 +13,7 @@
 
 name: Build Henge IPA
 
-# Manual only (Actions tab > Build Henge IPA > Run workflow): pushes to main don't build an IPA.
+# Build on updates to zh-hans; manual runs are also available from Actions > Build Henge IPA.
 on:
   workflow_dispatch: {}
   push:
